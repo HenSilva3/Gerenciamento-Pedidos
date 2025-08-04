@@ -1,3 +1,5 @@
+using OrderManagement.Application.Interfaces;
+using OrderManagement.Application.Services;
 using OrderManagement.Domain.Interfaces;
 using OrderManagement.Infrastructure.Repositorys;
 
@@ -9,6 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 
 var app = builder.Build();
 
